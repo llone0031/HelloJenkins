@@ -26,11 +26,10 @@ pipeline{
         stage("Build, Tag, Push"){
             steps{
                 script{
-                    env.IMAGE_TAG = "${FULL_VERSION}"
-                    env.GIT_TAG = "build/${FULL_VERSION}"
 
-                    echo "GIT Tag: ${GIT_TAG}"
-                    echo "Image Tag: ${IMAGE_TAG}"
+
+                    echo "GIT Tag: "
+                    echo "Image Tag: "
 
                     sh '''
                         docker build -t llone0031/hello-jenkins:${IMAGE_TAG} -f ./Dockerfile
