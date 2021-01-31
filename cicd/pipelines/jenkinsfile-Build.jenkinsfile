@@ -28,7 +28,8 @@ pipeline{
                 script{
                     echo "GIT Tag: "
                     echo "Image Tag: "
-                    docker.withRegistry( '', "274b6b94-6f1a-4137-934c-d549adafd57d"){
+             
+                    withDockerRegistry([credentialsId: "274b6b94-6f1a-4137-934c-d549adafd57d", url: "" ]) {
                         bat "docker build -f ./Dockerfile -t llone0031/hello-jenkins:02."
                         bat "docker push llone0031/hello-jenkins:02"
                     }
