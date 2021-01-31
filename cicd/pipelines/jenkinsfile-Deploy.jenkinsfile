@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+    environment {
+        HELM_FOLDER = 'cicd/helm'
+        HELM_DEPLOYMENT_NAME = 'HelloJenkins-helm'
+
+    }
+    stages{
+        stage("Helm Deploy"){
+            steps{
+                echo "========executing A========"
+                script {
+                    bat "helm install ${HELM_DEPLOYMENT_NAME} ${HELM_FOLDER} -f ${HELM_FOLDER}/values.yaml"
+                }
+            }
+        }
+    }
+}
