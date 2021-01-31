@@ -1,0 +1,13 @@
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.exe
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.deps.json
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.runtimeconfig.json
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.runtimeconfig.dev.json
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.dll
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\bin\Debug\netcoreapp3.1\HelloJenkins.pdb
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.csprojAssemblyReference.cache
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.AssemblyInfoInputs.cache
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.AssemblyInfo.cs
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.csproj.CoreCompileInputs.cache
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.dll
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.pdb
+C:\Users\llone\Desktop\Jenkins\HelloJenkins\HelloJenkins\obj\Debug\netcoreapp3.1\HelloJenkins.genruntimeconfig.cache

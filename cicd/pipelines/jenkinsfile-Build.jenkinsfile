@@ -3,24 +3,42 @@ pipeline{
 
     environment {
         GIT_CREDENTIALS_ID = "llone0031"
-        GIT_REPO_URL = ""
+        GIT_REPO_URL = "https://github.com/llone0031/HelloJenkins.git"
+        GIT_MAIN_BRANCH = "Master"
+
+        BASE_VERSION = "2011.01.0"
+        FULL_VERSION = "${BASE_VERSION}.${BUILD_NUMBER}"
 
     }
     stages{
-        stage("A"){
+        stage("Start Deploy Notify"){
             steps{
                 echo "========executing A========"
             }
-            post{
-                always{
-                    echo "========always========"
+        }
+        stage("Set UP Environment"){
+            steps{
+                echo "Set shared assembly version"
+            }
+        }
+        stage("Build, Tag, Push"){
+            steps{
+                LAST_STAGE = env.STAGE_NAME
+                if(env.BRANCH_NAME == "${GIT_MAIN_BRANCH}"){
+                    env.IMAGE_TAG = "${FULL_VERSION}"
+                    env.GIT_TAG = "build/${FULL_VERSION}"
                 }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
+
+                echo "GIT Tag: ${GIT_TAG}"
+                echo "Image Tag: ${IMAGE_TAG}"
+
+                sh '''
+                    docker build \ 
+                        -t llone0031/hello-jenkins:${IMAGE_TAG} \
+                        -f ./Dockerfile \
+                        .
+                    docker push llone0031/hello-jenkins:${IMAGE_TAG}
+
             }
         }
     }
