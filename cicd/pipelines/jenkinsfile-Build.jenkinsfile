@@ -30,7 +30,7 @@ pipeline{
                     echo "Image Tag: "
              
                     withDockerRegistry([credentialsId: "DockerHub", url: "" ]) {
-                        bat "docker build -f ./Dockerfile -t llone0031/hello-jenkins:02."
+                        bat "docker build -f ./Dockerfile -t llone0031/hello-jenkins:02 ."
                         bat "docker push llone0031/hello-jenkins:02"
                     }
 
