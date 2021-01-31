@@ -38,6 +38,7 @@ pipeline{
                         -f ./Dockerfile \
                         .
                     docker push llone0031/hello-jenkins:${IMAGE_TAG}
+                    '''
 
             }
         }
