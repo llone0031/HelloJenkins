@@ -31,10 +31,10 @@ pipeline{
                     echo "GIT Tag: "
                     echo "Image Tag: "
 
-                    sh '''
-                        docker build -f ./Dockerfile .
-                        docker push llone0031/hello-jenkins:01
-                        '''
+                    
+                    bet 'docker build -f ./Dockerfile -t llone0031/hello-jenkins:02 .'
+                    bet 'docker push llone0031/hello-jenkins:02'
+                        
 
                 }
 
