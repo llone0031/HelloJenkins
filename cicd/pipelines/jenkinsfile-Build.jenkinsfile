@@ -33,9 +33,7 @@ pipeline{
                 echo "Image Tag: ${IMAGE_TAG}"
 
                 sh '''
-                    docker build \ 
-                        -t llone0031/hello-jenkins:${IMAGE_TAG} \
-                        -f ./Dockerfile \
+                    docker build -t llone0031/hello-jenkins:${IMAGE_TAG} -f ./Dockerfile
                         .
                     docker push llone0031/hello-jenkins:${IMAGE_TAG}
                     '''
