@@ -7,7 +7,9 @@ pipeline{
         GIT_MAIN_BRANCH = "Master"
 
         BASE_VERSION = "2011.01.0"
-        FULL_VERSION = "${BASE_VERSION}.${BUILD_NUMBER}"
+        FULL_VERSION = "${BASE_VERSION}.01"
+        IMAGE_TAG = ""
+        GIT_TAG = ""
 
     }
     stages{
@@ -24,11 +26,8 @@ pipeline{
         stage("Build, Tag, Push"){
             steps{
                 script{
-                    LAST_STAGE = env.STAGE_NAME
-                    if(env.BRANCH_NAME == "${GIT_MAIN_BRANCH}"){
-                        env.IMAGE_TAG = "${FULL_VERSION}"
-                        env.GIT_TAG = "build/${FULL_VERSION}"
-                    }
+                    env.IMAGE_TAG = "${FULL_VERSION}"
+                    env.GIT_TAG = "build/${FULL_VERSION}"
 
                     echo "GIT Tag: ${GIT_TAG}"
                     echo "Image Tag: ${IMAGE_TAG}"
