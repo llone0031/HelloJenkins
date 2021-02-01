@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: llone0031/hello-jenkins:2
+  repository: llone0031/hello-jenkins:3
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -32,8 +32,10 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
+  targetPort: 80
+  nodePort: 31234
 
 ingress:
   enabled: false
