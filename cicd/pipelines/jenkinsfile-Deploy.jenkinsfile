@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
         HELM_FOLDER = 'cicd/helm'
-        HELM_DEPLOYMENT_NAME = 'HelloJenkins-helm'
+        HELM_DEPLOYMENT_NAME = 'hellohenkins-helm'
 
     }
     stages{
