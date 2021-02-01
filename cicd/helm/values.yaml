@@ -11,12 +11,12 @@ image:
   tag: ""
 
 imagePullSecrets: []
-nameOverride: "HelloJenkins"
-fullnameOverride: "HelloJenkins"
+nameOverride: "hellojenkins"
+fullnameOverride: "hellojenkins"
 
 spec:
-  name: "HelloJenkins"
-  containerName: "HelloJenkins=container"
+  name: "hellojenkins"
+  containerName: "hellojenkins=container"
 
 podAnnotations: {}
 
